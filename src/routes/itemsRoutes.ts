@@ -77,7 +77,7 @@ router.post("/", async (req: Request, res: Response) => {
     if (found) {
       return res.status(400).json({
         success: false,
-        message: "Student is already exists",
+        message: "item is already exists",
       });
     }
 
