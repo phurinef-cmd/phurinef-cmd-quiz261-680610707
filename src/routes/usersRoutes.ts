@@ -68,20 +68,20 @@ router.post("/logout", authenticateToken, (req: Request, res: Response) => {
 });
 
 // POST /api/vXXX/auth/reset
-// router.post("/reset", (req: Request, res: Response) => {
-//   try {
-//     reset_users();
-//     return res.status(200).json({
-//       success: true,
-//       message: "User database has been reset",
-//     });
-//   } catch (err) {
-//     return res.status(500).json({
-//       success: false,
-//       message: "Something is wrong, please try again",
-//       error: err,
-//     });
-//   }
-// });
+ router.post("/reset", (req: Request, res: Response) => {
+   try {
+     reset_users();
+     return res.status(200).json({
+       success: true,
+       message: "User database has been reset",
+     });
+   } catch (err) {
+     return res.status(500).json({
+       success: false,
+       message: "Something is wrong, please try again",
+       error: err,
+     });
+   }
+ });
 
 export default router;
